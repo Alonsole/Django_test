@@ -12,4 +12,4 @@ DATABASES = {
         'PORT': '5432',  
         'USER': 'postgres',  
         'PASSWORD': 'Ваш пароль',  
-<img src="https://github.com/Alonsole/Django_test/tree/task3/res/catalog.png" width=45% />
+<img src="https://github.com/Alonsole/Django_test/blob/task3/res/catalog.png" width=45% />
