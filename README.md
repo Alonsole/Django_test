@@ -4,7 +4,7 @@
 Настройка.  
 Перейти в main/settings и указать пароль подключения (Хост, порт) к postgresql. 
 Потребуется создать ДатаБазу netology_import_phones!  
-Проведены правки кода 25.09.2024г
+Проведены правки кода 25.09.2024г.  
 DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.postgresql',  
