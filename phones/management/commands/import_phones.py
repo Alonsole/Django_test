@@ -14,13 +14,15 @@ class Command(BaseCommand):
 
         for phone in phones:
             phone_model = Phone()
-            phone_model.id = int(phone['id'])
-            phone_model.name = phone['name']
+            phone_model.name = phone['name'] if len(phone['name']) > 0 else "None Phone"
             phone_model.price = float(phone['price'])
             phone_model.image = phone['image']
             phone_model.release_date = phone['release_date']
-            phone_model.lte_exists = phone['lte_exists']
+            phone_model.lte_exists = bool(phone['lte_exists'])
             phone_model.slug = slugify(phone_model.name)
-            phone_model.save()
+            if not Phone.objects.filter(slug=phone_model.slug).exists():
+                phone_model.save()
+            else:
+                print(f"Телефон: '{phone_model.name}' уже есть в базе, повторная загрузка невозможна")
 
 
